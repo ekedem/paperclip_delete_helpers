@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "paperclip_delete_helpers"
   gem.homepage = "http://github.com/ekedem/paperclip_delete_helpers"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Model and View helpers to handle deletion of paperclip attachments"
+  gem.description = "Model and View helpers to handle deletion of paperclip attachments"
   gem.email = "ekedem@gmail.com"
   gem.authors = ["Eyal Kedem"]
   # dependencies defined in Gemfile
