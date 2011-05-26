@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/paperclip_delete_helpers.rb",
+    "paperclip_delete_helpers.gemspec",
     "test/helper.rb",
     "test/test_paperclip_delete_helpers.rb"
   ]
