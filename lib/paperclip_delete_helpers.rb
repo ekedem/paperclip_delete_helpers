@@ -71,12 +71,14 @@ module FileDelete
   end
   
   module ViewHelpers
-    def show_paperclip_attachment(f, object, method, deletable=true, options = {})
+    def show_paperclip_attachment(f, object, method, deletable=true, options = {}, formtastic_options = {})
       res = ""
       if object.send(method).send(:exists?)
         content_type = object.send("#{method.to_s}_content_type".to_sym)
         if is_image content_type
-          res += image_tag(object.send(method).send(:url), :width => "200px")
+          width = options[:width].nil? ? "200px" : options[:width]
+          height = options[:height].nil? ? "" : options[:height]
+          res += image_tag(object.send(method).send(:url), :width => width, :height => height)
         else
           res += link_to(object.send("#{method.to_s}_file_name".to_sym), object.send(method).send(:url), {:target => "_blank"})
         end
